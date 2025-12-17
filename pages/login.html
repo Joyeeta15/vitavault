@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VitaVault – Your Health Organizer</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- LEFT SECTION -->
+    <div class="left">
+        <div class="brand">
+            <span class="logo">+</span>
+            <h3>VitaVault</h3>
+        </div>
+
+        <h1>Your personal<br>health organizer</h1>
+        <p class="subtitle">
+            Securely share records with your doctor and never miss a medication.
+        </p>
+
+        <!-- GOOGLE LOGIN -->
+        <button class="google-btn" id="googleBtn">
+            Continue with Google
+        </button>
+
+        <div class="divider">or continue with email</div>
+
+        <label>Email address</label>
+        <input type="email" id="email" placeholder="Enter your email">
+
+        <div class="password-row">
+            <label>Password</label>
+            <a href="#">Forgot Password?</a>
+        </div>
+        <input type="password" id="password" placeholder="••••••••">
+
+        <!-- EMAIL LOGIN -->
+        <button class="login-btn" id="loginBtn">Log In</button>
+
+        <p class="signup-text">
+            Don’t have an account? <a href="#">Sign up</a>
+        </p>
+
+        <div class="footer-icons">
+            <span>🔒 HIPAA Compliant</span>
+            <span>🛡 256-bit Encryption</span>
+        </div>
+    </div>
+
+    <!-- RIGHT SECTION -->
+    <div class="right">
+        <div class="overlay">
+            <p class="trusted">Trusted by patients nationwide</p>
+
+            <h2>Access your complete medical history anytime, anywhere.</h2>
+
+            <div class="feature">
+                <strong>Unified Records</strong>
+                <p>Lab results, prescriptions, and notes in one place.</p>
+            </div>
+
+            <div class="feature">
+                <strong>Smart Reminders</strong>
+                <p>Get notified for upcoming appointments and refills.</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Firebase config -->
+<script type="module" src="../firebase/firebase-config.js"></script>
+
+<!-- Auth logic -->
+<script type="module" src="../assets/js/auth.js"></script>
+
+</body>
+</html>
