@@ -45,6 +45,8 @@
 
   <!-- MAIN -->
   <main class="main-content">
+<form id="profileForm">
+
 
   <!-- PAGE HEADER -->
   <div class="page-header">
@@ -66,7 +68,8 @@
       </div>
     </div>
 
-    <button class="outline-btn">Change Photo</button>
+    <button type="button" class="outline-btn">Change Photo</button>
+
   </section>
 
   <!-- PERSONAL DETAILS -->
@@ -76,31 +79,33 @@
     <div class="form-grid">
       <div class="form-group">
         <label>Full Name</label>
-        <input type="text" value="John Doe">
+        <input type="text" id="name">
       </div>
 
       <div class="form-group">
         <label>Date of Birth</label>
-        <input type="date" value="1985-04-12">
+        <input type="date" id="dob">
       </div>
 
       <div class="form-group">
-        <label>Gender</label>
-        <select>
-          <option>Male</option>
-          <option>Female</option>
-          <option>Other</option>
-        </select>
-      </div>
+  <label>Gender</label>
+  <select id="gender">
+    <option value="">Select</option>
+    <option>Male</option>
+    <option>Female</option>
+    <option>Other</option>
+  </select>
+</div>
+
 
       <div class="form-group">
         <label>Phone Number</label>
-        <input type="tel" value="+1 (555) 000-0000">
+        <input type="tel" id="phone">
       </div>
 
       <div class="form-group full">
         <label>Address</label>
-        <input type="text" value="1234 Maplewood Drive, Springfield, IL 62704">
+        <input type="text" id="address">
       </div>
     </div>
   </section>
@@ -112,7 +117,7 @@
     <div class="form-grid">
       <div class="form-group">
         <label>Blood Group</label>
-        <select>
+        <select id="bloodGroup">
           <option>A+</option>
           <option>B+</option>
           <option>O+</option>
@@ -121,12 +126,12 @@
 
       <div class="form-group">
         <label>Height (cm)</label>
-        <input type="number" value="180">
+        <input type="number" id="height">
       </div>
 
       <div class="form-group">
         <label>Weight (kg)</label>
-        <input type="number" value="75">
+        <input type="number" id="weight">
       </div>
     </div>
   </section>
@@ -138,17 +143,17 @@
     <div class="form-grid">
       <div class="form-group">
         <label>Contact Name</label>
-        <input type="text" value="Jane Doe">
+        <input type="text" id="emergencyName">
       </div>
 
       <div class="form-group">
         <label>Relationship</label>
-        <input type="text" value="Spouse">
+        <input type="text" id="relationship">
       </div>
 
       <div class="form-group full">
         <label>Emergency Phone</label>
-        <input type="tel" value="+1 (555) 987-6543">
+        <input type="tel" id="emergencyPhone">
       </div>
     </div>
   </section>
@@ -156,14 +161,16 @@
   <!-- ACTION BUTTONS -->
   <div class="action-bar">
     <button class="btn-light">Cancel</button>
-    <button class="btn-primary">Save Changes</button>
+    <button class="btn-primary" type="submit">Save Changes</button>
   </div>
-
+</form>
 </main>
 
 
   
 </div>
+
+<script type="module" src="../assets/js/editprofile.js"></script>
 
 
 </body>
