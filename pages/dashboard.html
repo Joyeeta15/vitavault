@@ -31,13 +31,14 @@
     </nav>
 
     <!-- USER (BOTTOM) -->
-    <a href="profile.html" class="user">
-      <div class="avatar">A</div>
-      <div>
-        <strong>Alex Morgan</strong>
-        <small>alex@email.com</small>
-      </div>
-    </a>
+    <div class="user" onclick="window.location.href='profile.html'">
+  <div class="avatar" id="avatarLetter"></div>
+  <div>
+    <strong id="dashboardName">...</strong>
+    <small id="dashboardEmail">...</small>
+  </div>
+</div>
+
 
   </aside>
 
@@ -55,9 +56,11 @@
 
     <!-- WELCOME -->
     <section class="welcome">
-      <h2>Good Morning, Alex 👋</h2>
-      <p>Here is your daily health overview and recent updates.</p>
-    </section>
+  <h2>
+    Hello, <span id="welcomeName"></span>
+  </h2>
+  <p>Here is your daily health overview and recent updates.</p>
+</section>
 
     <!-- STATS -->
     <section class="stats">
@@ -133,7 +136,7 @@
 </div>
 
 <!-- DASHBOARD JS -->
-<script src="../assets/js/dashboard.js"></script>
+<script type="module" src="../assets/js/dashboard.js"></script>
 
 </body>
 </html>

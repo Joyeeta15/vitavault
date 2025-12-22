@@ -30,11 +30,12 @@
   </nav>
 
   <!-- USER (BOTTOM) -->
-  <div class="user" onclick="goToProfile()">
-  <div class="avatar">A</div>
+  <!-- USER (BOTTOM) -->
+    <div class="user" onclick="window.location.href='profile.html'">
+  <div class="avatar" id="avatarLetter"></div>
   <div>
-    <strong>Alex Morgan</strong>
-    <small>alex@email.com</small>
+    <strong id="dashboardName">...</strong>
+    <small id="dashboardEmail">...</small>
   </div>
 </div>
 
@@ -162,6 +163,8 @@
   
 </div>
 
+<!-- DASHBOARD JS -->
+<script type="module" src="../assets/js/profile.js"></script>
 
 </body>
 </html>

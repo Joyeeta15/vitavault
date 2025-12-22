@@ -30,11 +30,11 @@
   </nav>
 
   <!-- USER (BOTTOM) -->
-  <div class="user" onclick="goToProfile()">
-  <div class="avatar">A</div>
+    <div class="user" onclick="window.location.href='profile.html'">
+  <div class="avatar" id="avatarLetter"></div>
   <div>
-    <strong>Alex Morgan</strong>
-    <small>alex@email.com</small>
+    <strong id="dashboardName">...</strong>
+    <small id="dashboardEmail">...</small>
   </div>
 </div>
 
@@ -58,7 +58,7 @@
   <section class="card profile-summary">
     <div class="profile-left">
       <div class="profile-img">
-        <img src="https://i.pravatar.cc/100" alt="Profile">
+        <div class="profile-avatar" id="profileAvatar"></div>
         <span class="camera">📷</span>
       </div>
       <div>

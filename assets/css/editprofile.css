@@ -133,6 +133,21 @@ nav a.active {
     font-size: 18px;
 }
 
+.profile-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #1a73e8;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+}
+
+
 /* PROFILE SUMMARY */
 .profile-summary {
     display: flex;

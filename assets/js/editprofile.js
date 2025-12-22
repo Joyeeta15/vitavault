@@ -16,6 +16,9 @@ const form = document.getElementById("profileForm");
 /* ---------------- LOAD USER DATA ---------------- */
 
 onAuthStateChanged(auth, async (user) => {
+
+
+    
   if (!user) {
     window.location.href = "login.html";
     return;
@@ -26,6 +29,25 @@ onAuthStateChanged(auth, async (user) => {
 
   if (snap.exists()) {
     const data = snap.data();
+
+    // Fetch name & email from Firestore
+const fullName = data.name || "User";
+const email = user.email; // always from Auth
+
+
+
+// Set sidebar name
+const nameEl = document.getElementById("dashboardName");
+if (nameEl) nameEl.innerText = fullName;
+
+// Set sidebar email
+const emailEl = document.getElementById("dashboardEmail");
+if (emailEl) emailEl.innerText = email;
+
+// Set avatar letter (first letter of name)
+const avatarEl = document.getElementById("avatarLetter");
+if (avatarEl) avatarEl.innerText = fullName.charAt(0).toUpperCase();
+
 
     // Auto-fill inputs
     document.getElementById("name").value = data.name || "";
@@ -41,6 +63,7 @@ onAuthStateChanged(auth, async (user) => {
     document.getElementById("emergencyName").value = data.emergencyName || "";
     document.getElementById("relationship").value = data.relationship || "";
     document.getElementById("emergencyPhone").value = data.emergencyPhone || "";
+    
   }
 });
 

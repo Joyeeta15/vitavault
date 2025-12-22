@@ -31,13 +31,14 @@
     </nav>
 
     <!-- USER (BOTTOM) -->
-    <a href="profile.html" class="user">
-      <div class="avatar">A</div>
-      <div>
-        <strong>Alex Morgan</strong>
-        <small>alex@email.com</small>
-      </div>
-    </a>
+    <!-- USER (BOTTOM) -->
+    <div class="user" onclick="window.location.href='profile.html'">
+  <div class="avatar" id="avatarLetter"></div>
+  <div>
+    <strong id="dashboardName">...</strong>
+    <small id="dashboardEmail">...</small>
+  </div>
+</div>
 
   </aside>
 
@@ -128,12 +129,13 @@
       🔒 Your documents are encrypted and shared only with your assigned doctor.
     </div>
 
-    <div class="action-bar"
+
 
 </div>
 
 <!-- DASHBOARD JS -->
-<script src="../assets/js/dashboard.js"></script>
+<script type="module" src="../assets/js/upload.js"></script>
+
 
 </body>
 </html>
