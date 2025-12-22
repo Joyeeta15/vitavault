@@ -30,6 +30,13 @@ onAuthStateChanged(auth, async (user) => {
   if (snap.exists()) {
     const data = snap.data();
 
+    // Set name beside profile picture
+const profileNameEl = document.getElementById("profileName");
+if (profileNameEl) {
+  profileNameEl.innerText = data.name || "User";
+}
+
+
     // Fetch name & email from Firestore
 const fullName = data.name || "User";
 const email = user.email; // always from Auth
