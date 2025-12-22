@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>VitaVault | Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- DASHBOARD CSS -->
+  <link rel="stylesheet" href="../assets/css/upload.css">
+</head>
+
+<body>
+
+<div class="app">
+
+  <!-- ================= SIDEBAR ================= -->
+  <aside class="sidebar">
+
+    <div class="logo">
+      <span class="logo-icon">+</span>
+      <h3>VitaVault</h3>
+      <small>Patient Portal</small>
+    </div>
+
+    <nav class="nav">
+      <a href="dashboard.html" class="active">Dashboard</a>
+      <a href="upload.html" >Upload</a>
+      <a href="records.html">Health Records</a>
+      <a href="prescriptions.html">Prescriptions</a>
+      <a href="settings.html">Settings</a>
+    </nav>
+
+    <!-- USER (BOTTOM) -->
+    <a href="profile.html" class="user">
+      <div class="avatar">A</div>
+      <div>
+        <strong>Alex Morgan</strong>
+        <small>alex@email.com</small>
+      </div>
+    </a>
+
+  </aside>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main class="main-content">
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    Home / Patient Portal / Uploads
+  </div>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <h1>Upload Medical Documents</h1>
+    <p>Securely upload your records for doctor review.</p>
+  </div>
+
+  <!-- TABS -->
+  <div class="tabs">
+    <button class="tab active">Prescriptions</button>
+    <button class="tab">Lab Reports</button>
+    <button class="tab">Medical History</button>
+  </div>
+
+  <!-- UPLOAD BOX -->
+  <section class="card upload-box">
+    <div class="drop-area">
+      <div class="cloud-icon">☁️</div>
+      <h3>Click to upload or drag and drop</h3>
+      <p>Supported formats: PDF, JPEG, PNG.<br>Max file size: 25MB per file.</p>
+
+      <input type="file" hidden id="fileInput">
+      <button class="outline-btn"
+        onclick="document.getElementById('fileInput').click()">
+        Browse Computer
+      </button>
+    </div>
+  </section>
+
+  <!-- ATTACHED FILES -->
+  <h3 class="section-title">Attached Files (3)</h3>
+
+  <section class="files-list">
+
+    <!-- FILE : COMPLETED -->
+    <div class="file-card success">
+      <div class="file-left">
+        <div class="file-icon pdf">PDF</div>
+        <div>
+          <strong>Blood_Test_Results_May2024.pdf</strong>
+          <small>2.4 MB · Uploaded just now</small>
+        </div>
+      </div>
+      <span class="status success">Completed</span>
+    </div>
+
+    <!-- FILE : UPLOADING -->
+    <div class="file-card uploading">
+      <div class="file-left">
+        <div class="file-icon img">IMG</div>
+        <div class="file-info">
+          <strong>Prescription_Dr_Smith.jpg</strong>
+          <div class="progress-bar">
+            <div class="progress" style="width:45%"></div>
+          </div>
+        </div>
+      </div>
+      <span class="percent">45%</span>
+    </div>
+
+    <!-- FILE : FAILED -->
+    <div class="file-card error">
+      <div class="file-left">
+        <div class="file-icon exe">EXE</div>
+        <div>
+          <strong>Old_Scan_Backup.exe</strong>
+          <small class="error-text">File format not supported</small>
+        </div>
+      </div>
+      <span class="status error">Failed</span>
+    </div>
+
+  </section>
+
+  <!-- FOOTER ACTIONS -->
+  <div class="upload-footer">
+    <div class="privacy-note">
+      🔒 Your documents are encrypted and shared only with your assigned doctor.
+    </div>
+
+    <div class="action-bar"
+
+</div>
+
+<!-- DASHBOARD JS -->
+<script src="../assets/js/dashboard.js"></script>
+
+</body>
+</html>

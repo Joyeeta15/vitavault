@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>VitaVault | Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- DASHBOARD CSS -->
+  <link rel="stylesheet" href="../assets/css/dashboard.css">
+</head>
+
+<body>
+
+<div class="app">
+
+  <!-- ================= SIDEBAR ================= -->
+  <aside class="sidebar">
+
+    <div class="logo">
+      <span class="logo-icon">+</span>
+      <h3>VitaVault</h3>
+      <small>Patient Portal</small>
+    </div>
+
+    <nav class="nav">
+      <a href="dashboard.html" class="active">Dashboard</a>
+      <a href="upload.html" >Upload</a>
+      <a href="records.html">Health Records</a>
+      <a href="prescriptions.html">Prescriptions</a>
+      <a href="settings.html">Settings</a>
+    </nav>
+
+    <!-- USER (BOTTOM) -->
+    <a href="profile.html" class="user">
+      <div class="avatar">A</div>
+      <div>
+        <strong>Alex Morgan</strong>
+        <small>alex@email.com</small>
+      </div>
+    </a>
+
+  </aside>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main class="main-content">
+
+    <!-- TOP BAR -->
+    <header class="topbar">
+      <div>
+        <h1>Dashboard</h1>
+        <p>Overview of your health status</p>
+      </div>
+      <button class="upload-btn">+ New Upload</button>
+    </header>
+
+    <!-- WELCOME -->
+    <section class="welcome">
+      <h2>Good Morning, Alex 👋</h2>
+      <p>Here is your daily health overview and recent updates.</p>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats">
+      <div class="stat-card">
+        <h4>Blood Pressure</h4>
+        <h2>120/80</h2>
+        <span class="green">Normal</span>
+      </div>
+
+      <div class="stat-card">
+        <h4>Weight</h4>
+        <h2>75 kg</h2>
+        <span>-0.5kg since last month</span>
+      </div>
+
+      <div class="stat-card">
+        <h4>Heart Rate</h4>
+        <h2>72 bpm</h2>
+        <span>Resting avg.</span>
+      </div>
+    </section>
+
+    <!-- QUICK UPLOAD -->
+    <section class="quick-upload">
+      <div>
+        <h3>Quick Upload</h3>
+        <p>Securely upload medical reports or prescriptions.</p>
+      </div>
+      <button class="primary-btn">Upload Document →</button>
+    </section>
+
+    <!-- RECENT DOCUMENTS -->
+    <section class="documents">
+      <div class="doc-header">
+        <h3>Recent Documents</h3>
+        <a href="#">View All</a>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Document</th>
+            <th>Date</th>
+            <th>Type</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Blood Test Report.pdf</td>
+            <td>Oct 24, 2023</td>
+            <td>Lab Report</td>
+            <td><span class="badge shared">Shared</span></td>
+          </tr>
+          <tr>
+            <td>Chest X-Ray.jpg</td>
+            <td>Oct 20, 2023</td>
+            <td>Radiology</td>
+            <td><span class="badge private">Private</span></td>
+          </tr>
+          <tr>
+            <td>Prescription_Oct15.pdf</td>
+            <td>Oct 15, 2023</td>
+            <td>Prescription</td>
+            <td><span class="badge shared">Shared</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+
+</div>
+
+<!-- DASHBOARD JS -->
+<script src="../assets/js/dashboard.js"></script>
+
+</body>
+</html>
