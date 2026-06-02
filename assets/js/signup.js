@@ -41,19 +41,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
     try {
       const result = await createUserWithEmailAndPassword(auth, email, password);
-      const user = result.user;
+const user = result.user;
 
-      // 🔥 REDIRECT FIRST
-      window.location.href = "dashboard.html";
+// SAVE USER DATA FIRST
+await setDoc(
+  doc(db, "users", user.uid),
+  {
+    uid: user.uid,
+    name: email.split("@")[0],
+    email: user.email,
+    createdAt: serverTimestamp()
+  }
+);
 
-      // 🔥 SAVE USER DATA IN BACKGROUND
-      setDoc(doc(db, "users", user.uid), {
-        uid: user.uid,
-        name: email.split("@")[0],
-        email: user.email,
-        createdAt: serverTimestamp()
-      }).catch(console.error);
-
+// THEN REDIRECT
+window.location.href = "dashboard.html";
     } catch (error) {
       alert(error.code + " : " + error.message);
     }
@@ -71,19 +73,18 @@ document.addEventListener("DOMContentLoaded", () => {
       const user = result.user;
 
       // 🔥 REDIRECT FIRST (THIS FIXES YOUR ISSUE)
-      window.location.href = "dashboard.html";
+      await setDoc(
+  doc(db, "users", user.uid),
+  {
+    uid: user.uid,
+    name: user.displayName || user.email.split("@")[0],
+    email: user.email,
+    createdAt: serverTimestamp()
+  },
+  { merge: true }
+);
 
-      // 🔥 SAVE USER DATA IN BACKGROUND
-      setDoc(
-        doc(db, "users", user.uid),
-        {
-          uid: user.uid,
-          name: user.displayName || user.email.split("@")[0],
-          email: user.email,
-          createdAt: serverTimestamp()
-        },
-        { merge: true }
-      ).catch(console.error);
+window.location.href = "dashboard.html";
 
     } catch (error) {
       alert(error.code + " : " + error.message);

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VitaVault | Share Records</title>
+
+    <link rel="stylesheet" href="../assets/css/share.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <span class="logo-icon">+</span>
+            <h3>VitaVault</h3>
+            <!-- <small>Patient Portal</small> -->
+        </div>
+
+        <nav class="nav">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="records.html">Health Records</a>
+            <a href="share.html" class="active">Share Link</a>
+            <!-- <a href="settings.html">Settings</a> -->
+        </nav>
+
+        <div class="user" onclick="window.location.href='profile.html'">
+  <div class="avatar" id="avatarLetter"></div>
+  <div>
+    <strong id="dashboardName">...</strong>
+    <small id="dashboardEmail">...</small>
+  </div>
+</div>
+    </aside>
+
+    <!-- MAIN -->
+
+    <main class="main-content">
+
+        <div class="page-header">
+            <h1>Share Medical Records</h1>
+
+            <p>
+                Generate secure links to share records with doctors and hospitals.
+            </p>
+        </div>
+
+        <div class="security-box">
+            🔒 All shared links are encrypted and can be revoked anytime.
+        </div>
+
+        <!-- access share record -->
+         <section class="share-card">
+
+    <h2>Access Shared Records</h2>
+
+    <div class="form-group">
+
+        <label>Paste Shared Link</label>
+
+        <input
+            type="text"
+            id="sharedLink"
+            placeholder="Paste shared link here">
+
+    </div>
+
+    <button
+        class="generate-btn"
+        id="viewSharedBtn">
+
+        View Shared Record
+
+    </button>
+
+</section>
+
+        <!-- Generate Link -->
+
+        <section class="share-card">
+
+            <h2>Generate Secure Link</h2>
+
+            <!-- <h4>Select Records To Share</h4>
+
+            <div class="record-grid">
+
+                <label class="record-item">
+                    <input type="checkbox" id="healthRecords">
+                    <div>
+                        <strong>Health Records</strong>
+                        <small>5 Items</small>
+                    </div>
+                </label>
+
+                <label class="record-item">
+                    <input type="checkbox" id="prescriptions">
+                    <div>
+                        <strong>Prescriptions</strong>
+                        <small>3 Items</small>
+                    </div>
+                </label>
+
+                <label class="record-item">
+                    <input type="checkbox" id="reports">
+                    <div>
+                        <strong>Reports</strong>
+                        <small>4 Items</small>
+                    </div>
+                </label>
+
+                <label class="record-item">
+                    <input type="checkbox" id="diagnosis">
+                    <div>
+                        <strong>Diagnosis</strong>
+                        <small>2 Items</small>
+                    </div>
+                </label>
+
+            </div> -->
+
+            <div class="form-group">
+                <label>Doctor Email (Optional)</label>
+
+                <input
+    type="email"
+    id="doctorEmail"
+    placeholder="doctor@hospital.com">
+            </div>
+
+            <div class="form-group">
+                <label>Link Expires In</label>
+
+                <select id="expiresIn">
+                    <option>7 Days</option>
+                    <option selected>30 Days</option>
+                    <option>90 Days</option>
+                </select>
+            </div>
+
+            <label>Generated Secure Link</label>
+
+<div class="link-container">
+
+    <input
+        type="text"
+        id="generatedLink"
+        placeholder="Generated link will appear here"
+        readonly>
+
+    <button
+        type="button"
+        id="copyLinkBtn">
+
+        📋
+
+    </button>
+
+</div>
+            <button
+                class="generate-btn"
+                id="generateLinkBtn">
+                Generate Secure Link
+            </button>
+
+        </section>
+
+        <!-- Active Links -->
+
+        <h2>Active Shared Links</h2>
+
+<div id="activeLinksContainer">
+
+    <div class="empty-links">
+        <div class="empty-icon">🔗</div>
+        <h3>No Active Links</h3>
+        <p>
+            Generate a secure link to share your medical records.
+        </p>
+    </div>
+
+</div>
+
+    </main>
+
+</div>
+<script type="module" src="../assets/js/share.js"></script>
+</body>
+</html>

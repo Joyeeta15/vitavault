@@ -23,22 +23,20 @@ document.getElementById("googleBtn").addEventListener("click", async (e) => {
 
   try {
     const result = await signInWithPopup(auth, provider);
-    const user = result.user;
+const user = result.user;
 
-    // 🔥 Redirect immediately (LIVE SERVER SAFE)
-    window.location.href = "dashboard.html";
+await setDoc(
+  doc(db, "users", user.uid),
+  {
+    uid: user.uid,
+    name: user.displayName || user.email.split("@")[0],
+    email: user.email,
+    lastLogin: serverTimestamp()
+  },
+  { merge: true }
+);
 
-    // 🔥 Update / create user in Firestore (background)
-    setDoc(
-      doc(db, "users", user.uid),
-      {
-        uid: user.uid,
-        name: user.displayName || user.email.split("@")[0],
-        email: user.email,
-        lastLogin: serverTimestamp()
-      },
-      { merge: true }
-    ).catch(console.error);
+window.location.href = "dashboard.html";
 
   } catch (error) {
     alert(error.code + " : " + error.message);

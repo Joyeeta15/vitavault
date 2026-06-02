@@ -19,15 +19,14 @@
     <div class="logo">
       <span class="logo-icon">+</span>
       <h3>VitaVault</h3>
-      <small>Patient Portal</small>
+      <!-- <small>Patient Portal</small> -->
     </div>
 
     <nav class="nav">
       <a href="dashboard.html" class="active">Dashboard</a>
-      <a href="upload.html" >Upload</a>
       <a href="records.html">Health Records</a>
-      <a href="prescriptions.html">Prescriptions</a>
-      <a href="settings.html">Settings</a>
+      <a href="share.html">Share Link</a>
+      <!-- <a href="settings.html">Settings</a> -->
     </nav>
 
     <!-- USER (BOTTOM) -->
@@ -46,90 +45,107 @@
   <main class="main-content">
 
     <!-- TOP BAR -->
-    <header class="topbar">
-      <div>
-        <h1>Dashboard</h1>
-        <p>Overview of your health status</p>
-      </div>
-      <button class="upload-btn">+ New Upload</button>
-    </header>
+    <header class="dashboard-header">
+  <div>
+    <h1>Welcome back.. <span id="welcomeName"></span></h1>
+    <p>Here's an overview of your health information</p>
+  </div>
 
-    <!-- WELCOME -->
-    <section class="welcome">
-  <h2>
-    Hello, <span id="welcomeName"></span>
-  </h2>
-  <p>Here is your daily health overview and recent updates.</p>
+  <!-- <button class="upload-btn">+ Upload Record</button> -->
+</header>
+
+<div class="dashboard-grid">
+
+  <!-- Appointments -->
+  <!-- <section class="dashboard-card">
+    <div class="card-title">
+      <h3>Upcoming Appointments</h3>
+      <a href="#">View All</a>
+    </div>
+
+    <div class="appointment-item">
+      <h4>Dr. Sarah Johnson</h4>
+      <p>Cardiologist</p>
+      <span>June 2, 2026 at 10:00 AM</span>
+    </div>
+
+    <div class="appointment-item">
+      <h4>Dr. Michael Chen</h4>
+      <p>General Physician</p>
+      <span>June 8, 2026 at 2:30 PM</span>
+    </div>
+  </section> -->
+
+  <!-- Medication -->
+  <!-- <section class="dashboard-card">
+    <div class="card-title">
+      <h3>Medication Reminders</h3>
+      <a href="#">View All</a>
+    </div>
+
+    <div class="medicine-item">
+      <h4>Paracetamol 500mg</h4>
+      <p>Twice Daily</p>
+      <span>8:00 PM Today</span>
+    </div>
+
+    <div class="medicine-item">
+      <h4>Vitamin D</h4>
+      <p>Once Daily</p>
+      <span>9:00 AM Tomorrow</span>
+    </div>
+  </section> -->
+
+  <section class="stats-grid">
+
+    <div class="stat-card">
+        <h3 id="totalRecords">0</h3>
+        <p>Total Records</p>
+    </div>
+
+    <div class="stat-card">
+        <h3 id="totalShares">0</h3>
+        <p>Shared Links</p>
+    </div>
+
+    <div class="stat-card">
+        <h3 id="activeShares">0</h3>
+        <p>Active Links</p>
+    </div>
+
+    <div class="stat-card">
+        <h3 id="revokedShares">0</h3>
+        <p>Revoked Links</p>
+    </div>
+
 </section>
 
-    <!-- STATS -->
-    <section class="stats">
-      <div class="stat-card">
-        <h4>Blood Pressure</h4>
-        <h2>120/80</h2>
-        <span class="green">Normal</span>
-      </div>
+</div>
 
-      <div class="stat-card">
-        <h4>Weight</h4>
-        <h2>75 kg</h2>
-        <span>-0.5kg since last month</span>
-      </div>
+<section class="quick-actions">
 
-      <div class="stat-card">
-        <h4>Heart Rate</h4>
-        <h2>72 bpm</h2>
-        <span>Resting avg.</span>
-      </div>
-    </section>
+  <h3>Quick Actions</h3>
 
-    <!-- QUICK UPLOAD -->
-    <section class="quick-upload">
-      <div>
-        <h3>Quick Upload</h3>
-        <p>Securely upload medical reports or prescriptions.</p>
-      </div>
-      <button class="primary-btn">Upload Document →</button>
-    </section>
+  <div class="action-grid">
 
-    <!-- RECENT DOCUMENTS -->
-    <section class="documents">
-      <div class="doc-header">
-        <h3>Recent Documents</h3>
-        <a href="#">View All</a>
-      </div>
+    <a href="records.html" class="action-card">
+      📋
+      <span>View Records</span>
+    </a>
 
-      <table>
-        <thead>
-          <tr>
-            <th>Document</th>
-            <th>Date</th>
-            <th>Type</th>
-            <th>Status</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Blood Test Report.pdf</td>
-            <td>Oct 24, 2023</td>
-            <td>Lab Report</td>
-            <td><span class="badge shared">Shared</span></td>
-          </tr>
-          <tr>
-            <td>Chest X-Ray.jpg</td>
-            <td>Oct 20, 2023</td>
-            <td>Radiology</td>
-            <td><span class="badge private">Private</span></td>
-          </tr>
-          <tr>
-            <td>Prescription_Oct15.pdf</td>
-            <td>Oct 15, 2023</td>
-            <td>Prescription</td>
-            <td><span class="badge shared">Shared</span></td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
+    <a href="share.html" class="action-card">
+      🔗
+      <span>Share Records</span>
+    </a>
+
+    <a href="records.html" class="action-card">
+      ⬆️
+      <span>Upload Record</span>
+    </a>
+
+  </div>
+
+</section>
 
   </main>
 

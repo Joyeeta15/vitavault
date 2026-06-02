@@ -22,12 +22,10 @@
   </div>
 
   <nav class="nav">
-    <a href="dashboard.html" class="active">Dashboard</a>
-    <a href="upload.html" >Upload</a>
+    <a href="dashboard.html">Dashboard</a>
     <a href="records.html">Health Records</a>
-    <a href="prescriptions.html">Prescriptions</a>
-    <a href="settings.html">Settings</a>
-  </nav>
+    <a href="share.html">Share Link</a>
+</nav>
 
   <!-- USER (BOTTOM) -->
   <!-- USER (BOTTOM) -->
@@ -45,120 +43,202 @@
 
 
   <!-- MAIN -->
-  <main class="main-content">
+<main class="main-content">
 
-  <!-- BREADCRUMB + TOP BAR -->
-  <div class="top-bar">
-    <div class="breadcrumb">
-      Patient <span>›</span> Patient Details <span>›</span> <strong>John Doe</strong>
+
+<section class="info-card">
+
+<main class="main-content">
+
+<div class="profile-header">
+
+<div>
+    <h1>Personal Details</h1>
+    <p>Manage your personal and medical information</p>
+</div>
+
+<div class="header-actions">
+
+    <button id="editBtn" class="edit-btn">
+        Edit Details
+    </button>
+
+    <button id="logoutBtn" class="logout-btn">
+        Logout
+    </button>
+
+</div>
+
+</div>
+
+<!-- BASIC INFORMATION -->
+
+<section class="info-card">
+
+  <h2>👤 Basic Information</h2>
+
+<div class="info-grid">
+
+    <div class="field">
+        <label>Full Name</label>
+        <div class="view-mode" id="fullNameText">...</div>
+        <input type="text" id="fullName"
+               class="editable edit-mode"
+               style="display:none;">
     </div>
 
-    <div class="top-icons">
-      <span class="bell">🔔</span>
-      <img src="https://i.pravatar.cc/40" class="top-avatar">
-    </div>
-  </div>
-
-  <!-- PROFILE CARD -->
-  <section class="profile-card">
-    <div class="profile-left">
-      <img src="https://i.pravatar.cc/120" class="profile-pic">
-      <span class="online-dot"></span>
-
-      <h2>John Doe</h2>
-      <p class="email">john.doe@example.com</p>
-
-      <a href="editprofile.html" class="edit-link">
-  <button class="edit-btn">Edit Profile</button>
-</a>
+    <div class="field">
+        <label>ID</label>
+        <div class="view-mode" id="patientIdText">...</div>
     </div>
 
-    <div class="profile-right">
-      <div class="info-grid">
-        <div><span>Gender</span><strong>Male</strong></div>
-        <div><span>Age</span><strong>34 Years</strong></div>
-        <div><span>Blood Type</span><strong>O+</strong></div>
-        <div><span>Status</span><strong class="status active">Active</strong></div>
-
-        <div><span>Patient ID</span><strong>#883920</strong></div>
-        <div><span>Registration Date</span><strong>Jan 15, 2023</strong></div>
-        <div><span>Phone</span><strong>+1 (555) 123-4567</strong></div>
-        <div><span>Address</span><strong>San Francisco</strong></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- VITALS -->
-  <h3 class="section-title">Patient Current Vitals</h3>
-
-  <section class="vitals">
-    <div class="vital-card">
-      <h4>Blood Pressure</h4>
-      <p class="vital-value">120/80 <span>mmHg</span></p>
-      <span class="badge green">Normal</span>
+    <div class="field">
+        <label>Date of Birth</label>
+        <div class="view-mode" id="dobText">...</div>
+        <input type="date" id="dob"
+               class="editable edit-mode"
+               style="display:none;">
     </div>
 
-    <div class="vital-card">
-      <h4>Heart Rate</h4>
-      <p class="vital-value">72 <span>BPM</span></p>
-      <span class="badge red">Review Needed</span>
+    <div class="field">
+        <label>Age</label>
+        <div class="view-mode" id="ageText">...</div>
     </div>
 
-    <div class="vital-card">
-      <h4>Glucose</h4>
-      <p class="vital-value">105 <span>mg/dL</span></p>
-      <span class="badge green">In the norm</span>
+    <div class="field">
+        <label>Gender</label>
+        <div class="view-mode" id="genderText">...</div>
+
+        <select id="gender"
+                class="editable edit-mode"
+                style="display:none;">
+
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+
+        </select>
     </div>
 
-    <div class="vital-card">
-      <h4>Cholesterol</h4>
-      <p class="vital-value">185 <span>mg/dL</span></p>
-      <span class="badge green">In the norm</span>
-    </div>
-  </section>
+    <div class="field">
+        <label>Blood Group</label>
+        <div class="view-mode" id="bloodGroupText">...</div>
 
-  <!-- HISTORY -->
-  <section class="history">
-    <div class="history-header">
-      <h3>Patient History</h3>
-      <span>Total 15 Visits</span>
+        <input type="text"
+               id="bloodGroup"
+               class="editable edit-mode"
+               style="display:none;">
     </div>
 
-    <table>
-      <thead>
-        <tr>
-          <th>Date</th>
-          <th>Diagnosis</th>
-          <th>Severity</th>
-          <th>Total Visits</th>
-          <th>Status</th>
-          <th>Documents</th>
-        </tr>
-      </thead>
+</div>
 
-      <tbody>
-        <tr>
-          <td>30 Jan 2023</td>
-          <td>Routine Checkup</td>
-          <td><span class="badge green">Low</span></td>
-          <td>2</td>
-          <td><span class="badge blue">Under Treatment</span></td>
-          <td><button class="download-btn">Download</button></td>
-        </tr>
 
-        <tr>
-          <td>12 Jan 2023</td>
-          <td>Viral Fever</td>
-          <td><span class="badge red">High</span></td>
-          <td>1</td>
-          <td><span class="badge green">Cured</span></td>
-          <td><button class="download-btn">Download</button></td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
+</section>
+
+<!-- CONTACT INFORMATION -->
+
+<section class="info-card">
+
+
+<h2>📞 Contact Information</h2>
+
+<div class="info-grid">
+
+    <div class="field">
+        <label>Email Address</label>
+        <div class="view-mode" id="emailText">...</div>
+    </div>
+
+    <div class="field">
+        <label>Phone Number</label>
+        <div class="view-mode" id="phoneText">...</div>
+
+        <input type="text"
+               id="phone"
+               class="editable edit-mode"
+               style="display:none;">
+    </div>
+
+    <div class="field full-width">
+        <label>Address</label>
+        <div class="view-mode" id="addressText">...</div>
+
+        <input type="text"
+               id="address"
+               class="editable edit-mode"
+               style="display:none;">
+    </div>
+
+</div>
+
+
+</section>
+
+<!-- EMERGENCY CONTACT -->
+
+<section class="info-card">
+
+
+<h2>🚨 Emergency Contact</h2>
+
+<div class="info-grid">
+
+    <div class="field">
+        <label>Contact Name</label>
+        <div class="view-mode" id="emergencyNameText">...</div>
+
+        <input type="text"
+               id="emergencyName"
+               class="editable edit-mode"
+               style="display:none;">
+    </div>
+
+    <div class="field">
+        <label>Relationship</label>
+        <div class="view-mode" id="relationshipText">...</div>
+
+        <input type="text"
+               id="relationship"
+               class="editable edit-mode"
+               style="display:none;">
+    </div>
+
+    <div class="field">
+        <label>Phone Number</label>
+        <div class="view-mode" id="emergencyPhoneText">...</div>
+
+        <input type="text"
+               id="emergencyPhone"
+               class="editable edit-mode"
+               style="display:none;">
+    </div>
+
+    <div class="field">
+        <label>Email Address</label>
+        <div class="view-mode" id="emergencyEmailText">...</div>
+
+        <input type="email"
+               id="emergencyEmail"
+               class="editable edit-mode"
+               style="display:none;">
+    </div>
+
+</div>
+
+
+</section>
 
 </main>
+
+
+</section>
+
+
+
+
+</main>
+
+
 
   
 </div>

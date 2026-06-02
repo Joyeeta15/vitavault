@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VitaVault | Health Records</title>
+
+    <link rel="stylesheet" href="../assets/css/records.css">
+    
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- SIDEBAR -->
+
+   <aside class="sidebar">
+
+    <div class="logo">
+      <span class="logo-icon">+</span>
+      <h3>VitaVault</h3>
+      <!-- <small>Patient Portal</small> -->
+    </div>
+
+    <nav class="nav">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="records.html" class="active">Health Records</a>
+      <a href="share.html">Share Link</a>
+      <!-- <a href="settings.html">Settings</a> -->
+    </nav>
+
+    <!-- USER (BOTTOM) -->
+     <div class="user" onclick="window.location.href='profile.html'">
+  <div class="avatar" id="avatarLetter"></div>
+  <div>
+    <strong id="dashboardName">...</strong>
+    <small id="dashboardEmail">...</small>
+  </div>
+</div>
+
+
+  </aside>
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main-content">
+
+        <div class="records-header">
+
+            <div>
+                <h1>Health Records</h1>
+                <p>View and manage your medical history</p>
+            </div>
+
+            <button class="upload-btn" id="openModal">
+    + Upload Record
+</button>
+
+        </div>
+
+        <!-- TABS -->
+
+        <!-- <div class="record-tabs">
+            <button class="active">All</button>
+            <button>Prescriptions</button>
+            <button>Reports</button>
+            <button>Diagnosis</button>
+             <button></button> -->
+        <!-- </div> --> 
+
+        <!-- SEARCH -->
+
+        <!-- <div class="search-box">
+            <input type="text"
+                placeholder="Search records by doctor, title or hospital">
+        </div> -->
+
+        <!-- RECORDS -->
+
+        <!-- <div class="records-list">
+
+            <div class="record-card">
+
+                <div class="record-icon">
+                    📄
+                </div>
+
+                <div class="record-details">
+
+                    <h3>Blood Test Report</h3>
+
+                    <div class="record-meta">
+                        <span>15 May 2026</span>
+                        <span>Dr. Sharma</span>
+                        <span>Apollo Diagnostics</span>
+                    </div>
+
+                    <span class="record-tag report">
+                        Report
+                    </span>
+
+                </div>
+
+                <div class="record-actions">
+                    <button>View</button>
+                    <button>Download</button>
+                </div>
+
+            </div>
+
+             <div class="record-card">
+
+                <div class="record-icon">
+                    💊
+                </div>
+
+                <div class="record-details">
+
+                    <h3>Diabetes Prescription</h3>
+
+                    <div class="record-meta">
+                        <span>10 May 2026</span>
+                        <span>Dr. Das</span>
+                        <span>Apollo Hospital</span>
+                    </div>
+
+                    <span class="record-tag prescription">
+                        Prescription
+                    </span>
+
+                </div>
+
+                <div class="record-actions">
+                    <button>View</button>
+                    <button>Download</button>
+                </div>
+
+            </div>
+
+            <div class="record-card">
+
+                <div class="record-icon">
+                    🩺
+                </div>
+
+                <div class="record-details">
+
+                    <h3>Diagnosis</h3>
+
+                    <div class="record-meta">
+                        <span>15 May 2026</span>
+                        <span>Dr. Sharma</span>
+                    </div>
+
+                    <span class="record-tag diagnosis">
+                        Diagnosis
+                    </span>
+
+                </div>
+
+                <div class="record-actions">
+                    <button>View</button>
+                </div>
+
+            </div> -->
+
+        <!-- </div>  -->
+
+        <div class="records-list" id="recordsList">
+        </div>
+
+    </main>
+
+</div>
+
+<div class="modal" id="uploadModal">
+
+    <div class="modal-content">
+
+        <span class="close-btn" id="closeModal">&times;</span>
+
+        <h2>Upload New Record</h2>
+
+        <label>Caption </label>
+        <input  type="text" id="caption"
+            
+            placeholder="e.g. Blood Test Report, Diabetes Prescription">
+
+
+        <label>Record Type</label>
+        <select id="recordType">
+            <option>Prescription</option>
+            <option>Medical Report</option>
+        </select>
+
+        <label>Doctor Name</label>
+        <input type="text" id="doctor" placeholder="...">
+
+        <label>Hospital Name</label>
+        <input type="text" id="hospital" placeholder="...">
+
+        <label>Visit Date</label>
+        <input type="date" id="visitDate">
+
+        <label>Choose File</label>
+        <input type="file" id="fileInput">
+
+        <button class="save-btn" id="saveRecord">
+            Save Record
+        </button>
+
+    </div>
+
+</div>
+<script type="module" src="../assets/js/records.js"></script>
+</body>
+</html>
