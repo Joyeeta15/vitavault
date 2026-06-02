@@ -95,11 +95,10 @@ generateBtn.addEventListener("click", async () => {
             }
         );
 
-const BASE_PATH = "/VitaVault";
+const BASE_PATH = "/vitavault";
 
 const link =
-`${window.location.origin}${BASE_PATH}/pages/shared_view.html?id=${shareDoc.id}`;
-
+`${window.location.origin}${BASE_PATH}/pages/shared_view.html?id=${docSnap.id}`;
 
         document.getElementById("generatedLink").value = link;
 
