@@ -95,8 +95,11 @@ generateBtn.addEventListener("click", async () => {
             }
         );
 
-        const link =
-        `${window.location.origin}/pages/shared_view.html?id=${shareDoc.id}`;
+const BASE_PATH = "/VitaVault";
+
+const link =
+`${window.location.origin}${BASE_PATH}/pages/shared_view.html?id=${shareDoc.id}`;
+
 
         document.getElementById("generatedLink").value = link;
 
@@ -177,9 +180,10 @@ let html = "";
 
         const data = docSnap.data();
 
-        const link =
-`${window.location.origin}/pages/shared_view.html?id=${docSnap.id}`;
+        const BASE_PATH = "/VitaVault";
 
+const link =
+`${window.location.origin}${BASE_PATH}/pages/shared_view.html?id=${shareDoc.id}`;
 html += `
 <div class="link-card">
 
